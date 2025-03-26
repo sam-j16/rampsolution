@@ -8,11 +8,12 @@ export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, dis
   return (
     <div className="RampInputCheckbox--container" data-testid={inputId}>
       <label
-        className={classNames("RampInputCheckbox--label", {
-          "RampInputCheckbox--label-checked": checked,
-          "RampInputCheckbox--label-disabled": disabled,
-        })}
-      />
+  htmlFor={inputId}n // i added this to connect the label element the checkBox input to fix the click function
+  className={classNames("RampInputCheckbox--label", {
+    "RampInputCheckbox--label-checked": checked,
+    "RampInputCheckbox--label-disabled": disabled,
+  })}
+/>
       <input
         id={inputId}
         type="checkbox"

@@ -21,8 +21,7 @@ export function App() {
 
   const loadAllTransactions = useCallback(async () => {
     setIsLoading(true)
-    transactionsByEmployeeUtils.invalidateData()
-
+// i deleted this line because it was resetting the filter 
     await employeeUtils.fetchAll()
     await paginatedTransactionsUtils.fetchAll()
 
